@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Header from "./header";
+import Footer from './footer';
 
 
 function Books() {
@@ -92,6 +94,8 @@ function Books() {
 
 
     return (
+        <>
+        <Header></Header>
         <div className="container">
             {books.map((book) => (
                 <div key={book.id} className="card">
@@ -102,6 +106,8 @@ function Books() {
                 </div>
             ))}
         </div>
+        <Footer></Footer>
+        </>
     );
 }
 export default Books;

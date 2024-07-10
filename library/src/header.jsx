@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-function Header() {
+function HeaderVisitor() {
     return (
         <header>
             <div className="logo">
@@ -10,19 +11,18 @@ function Header() {
             <nav>
                 <ul>
                     <li>
-                        <a href="">Home</a>
-                        <a href="">Library</a>
-                        <a href="">About us</a>
-                        <a href="">Contact</a>
+                        <Link to="/">Home</Link>
+                        <Link to="/aboutus">About us</Link>
+                        <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
             </nav>
 
             <div className="icons">
-
+                <Link to="/signUp">Sign up</Link>
             </div>
         </header>
     )
 }
 
-export default Header;
+export default HeaderVisitor;
